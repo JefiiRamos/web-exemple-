@@ -3,8 +3,8 @@
   --background-color: #2f2f2f;
   --border-bottom: #e2e2e2;
   --border-color: #444444;
-  --primery-color: #00FFC2;
-  --primery-color-900: #009974;
+  --primery-color: #008EA2;
+  --primery-color-900: #2F4858;
   --input-color: #3D3D3D;
 }
 
@@ -35,6 +35,7 @@ header {
   height: calc(100vh - 7rem );
   align-items: center;
   justify-content: center;
+  background-color: rgba(0 , 0, 0, 0.5);
 }
 
 .container > h1 {
@@ -42,30 +43,39 @@ header {
 }
 
 .input__group {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  background-color: #e2e2e2;
+  border-radius: 8px;
 }
 
 .input__group > label { 
   margin-bottom: 0.5rem;
+  color: #2f2f2f;
 }
 
 .input__group > input {
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: var(--input-color);
-  color: var(--border-bottom);
+  background-color: #c7c5c5;
+  color: var(--input-color);
   border: var(--border);
 }
 
 button {
-  width: 300px;
-  padding: 0.5rem;
-  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--border-bottom);
+  border: 3px;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: 1s;
   background-color: var(--primery-color);
-  transition: all 0.2s;
-  cursor: pointer;
 }
+
 
 button:hover{
   background-color: var(--primery-color-900);
@@ -84,7 +94,7 @@ footer {
 footer > p {
   font-size: 0.5rem;
 }
-.button{
+.button::before{
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -98,4 +108,22 @@ footer > p {
 .button:hover::before{
   width: 150%;
 }
+.animated-background {
+  background: linear-gradient(
+    to right, #008EA2, #71D891, #F9F871);
+    background-size: 400% 400%;
+    animation: animated-background 10s infinite ease-in-out;
+}
+@keyframes animated-background {
+  0%{
+    background-position: 0 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0 50%;
+    }
+  }
+
 
