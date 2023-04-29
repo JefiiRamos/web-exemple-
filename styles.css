@@ -19,6 +19,7 @@ body {
   color: var(--border-bottom);
   font-family: 'Roboto', sans-serif;
 }
+
 header {
   height: 5rem;
   padding: 1rem;
@@ -27,6 +28,14 @@ header {
   align-items: center;
 
   border-bottom: 1px solid var(--border-bottom);
+}
+
+header > img {
+  width: 80px;
+}
+
+header > i {
+  display: none;
 }
 
 .container {
@@ -123,6 +132,19 @@ footer > p {
   }
   100%{
     background-position: 0 50%;
+    }
+  }
+
+  @media ( min-width: 320px) and (max-width: 768px) {
+    .usuario {
+      display: none;
+    }
+    header > strong {
+      display: none;
+    }
+    header > i {
+      display: flex;
+      cursor: pointer;
     }
   }
 
