@@ -34,8 +34,12 @@ header > img {
   width: 80px;
 }
 
-header > i {
+header > .ph-list {
   display: none;
+}
+
+header > .ph-user {
+  cursor: pointer;
 }
 
 .container {
@@ -88,6 +92,7 @@ button {
 
 button:hover{
   background-color: var(--primery-color-900);
+  cursor: pointer;
 }
 
 footer {
